@@ -33,9 +33,9 @@ export default function Hero() {
     <section id="home" className="min-h-screen pt-16 flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
-          src="./attached_assets/IMG_3224.jpg" 
+          src="/attached_assets/IMG_3224.jpg" 
           alt="Background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gray-800/50"></div>
       </div>
