@@ -30,8 +30,7 @@ export default function Hero() {
   }, [text, isDeleting, roleIndex]);
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Image with Overlay */}
+    <section id="home" className="min-h-screen pt-16 flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
           src="/attached_assets/IMG_3224.jpg" 
@@ -83,6 +82,12 @@ export default function Hero() {
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-white"
+              onClick={() => {
+                const contactSection = document.querySelector("#contacts");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
               Hire Me
             </Button>
