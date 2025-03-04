@@ -5,6 +5,7 @@ import About from "@/components/sections/About";
 import Projects from "@/components/sections/Projects";
 import Skills from "@/components/sections/Skills";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/sections/Footer";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -13,17 +14,18 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="min-h-screen bg-background text-foreground"
+      className="min-h-screen bg-background text-foreground flex flex-col"
     >
       <CircuitBackground />
       <Navbar />
-      <main>
+      <main className="flex-grow">
         <Hero />
         <About />
         <Projects />
         <Skills />
         <Contact />
       </main>
+      <Footer />
     </motion.div>
   );
 }
