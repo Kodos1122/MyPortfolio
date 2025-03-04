@@ -1,11 +1,14 @@
-import express, { type Request, Response, NextFunction } from "express";
+import express, { Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { VercelRequest, VercelResponse } from "@vercel/node";
+import { createServer } from "http";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// ✅ Middleware for request logging
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -36,29 +39,28 @@ app.use((req, res, next) => {
   next();
 });
 
+// ✅ Async IIFE to initialize the app
 (async () => {
-  const server = await registerRoutes(app);
+  const server = createServer(app);
+  await registerRoutes(app);
 
+  // ✅ Centralized error handling
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
-
     res.status(status).json({ message });
-    throw err;
+    log(`Error: ${message}`);
   });
 
+  // ✅ Setup Vite (only in development)
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
     serveStatic(app);
   }
-
-  const port = 5001;  // Change port to 5001 since 3000 is busy
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
 })();
+
+// ✅ Export as a Vercel API handler
+export default function handler(req: VercelRequest, res: VercelResponse) {
+  return app(req as any, res as any);
+}
