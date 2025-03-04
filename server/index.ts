@@ -56,9 +56,9 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
+  // Serve the app on port 5001 instead of 5000 (which is busy)
   // this serves both the API and the client
-  const port = 5000;
+  const port = 5001;
   server.listen({
     port,
     host: "0.0.0.0",
