@@ -24,9 +24,8 @@ export default function About() {
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold mb-4">Who am I?</h3>
                 <p className="text-muted-foreground">
-                  I am a passionate developer and designer with expertise in creating beautiful, 
-                  functional websites and applications. With years of experience in both frontend 
-                  and backend development, I bring ideas to life through clean code and intuitive design.
+                I am a passionate developer and designer who thrives on crafting innovative, dynamic, and highly functional digital experiences. With a strong background in both frontend and backend development, I specialize in building modular and scalable applications that seamlessly blend aesthetics with performance. 
+                My journey in development has been driven by a deep curiosity for technology and a commitment to writing clean, efficient, and maintainable code. I take pride in transforming ideas into intuitive and visually compelling solutions that not only meet technical requirements but also enhance user experience. Whether it's designing pixel-perfect interfaces or architecting robust backend systems.
                 </p>
               </CardContent>
             </Card>
@@ -41,10 +40,20 @@ export default function About() {
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold mb-4">What I do?</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>✓ Web Development</li>
-                  <li>✓ UI/UX Design</li>
-                  <li>✓ Mobile Applications</li>
-                  <li>✓ Technical Consulting</li>
+                <li>✓ Web Development</li>
+<li>✓ UI/UX Design</li>
+<li>✓ Mobile Application Development</li>
+<li>✓ Technical Consulting</li>
+<li>✓ Full-Stack Development</li>
+<li>✓ API Design & Integration</li>
+<li>✓ Database Management</li>
+<li>✓ Cloud Computing & Deployment</li>
+<li>✓ Performance Optimization</li>
+<li>✓ SEO & Digital Marketing Strategies</li>
+<li>✓ AI & Machine Learning Integration</li>
+<li>✓ E-Commerce Solutions</li>
+<li>✓ DevOps & CI/CD Pipelines</li>
+
                 </ul>
               </CardContent>
             </Card>

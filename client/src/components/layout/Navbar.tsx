@@ -32,7 +32,7 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="text-xl font-bold text-primary"
+          className="text-xl font-bold text-primary bg-gradient-to-r from-blue-500 to-red-500 text-transparent bg-clip-text"
         >
           Portfolio.
         </motion.div>

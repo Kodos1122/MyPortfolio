@@ -4,19 +4,19 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with React and Node.js",
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb",
+    title: "GlamHub",
+    description: "A full-stack e-commerce solution with React and Node.js.",
+    image: "/glamhub.png", // Adjust the filename based on your actual image
     tags: ["React", "Node.js", "MongoDB"],
   },
   {
-    title: "Social Media Dashboard",
+    title: "Static Website Template",
     description: "Analytics dashboard for social media management",
     image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5",
     tags: ["Vue.js", "D3.js", "Firebase"],
   },
   {
-    title: "Portfolio Website",
+    title: "Capstone Project",
     description: "Modern portfolio website with animations",
     image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
     tags: ["React", "Framer Motion", "Tailwind"],
