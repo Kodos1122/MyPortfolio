@@ -53,7 +53,7 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  const port = 3000;
+  const port = 5001;  // Change port to 5001 since 3000 is busy
   server.listen({
     port,
     host: "0.0.0.0",

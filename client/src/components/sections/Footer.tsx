@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiGitter } from "react-icons/si";
 
 export default function Footer() {
   return (
@@ -70,12 +70,12 @@ export default function Footer() {
               <SiLinkedin className="w-6 h-6" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://gitter.im"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              <SiTwitter className="w-6 h-6" />
+              <SiGitter className="w-6 h-6" />
             </a>
           </motion.div>
         </div>
