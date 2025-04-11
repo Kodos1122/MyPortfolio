@@ -1,6 +1,4 @@
 {
-  "include": ["client/src/**/*", "shared/**/*", "server/**/*"],
-  "exclude": ["node_modules", "build", "**/*.test.ts"],
   "compilerOptions": {
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/typescript/tsbuildinfo",
@@ -13,13 +11,15 @@
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
     "moduleResolution": "node",
-    "baseUrl": "./client/src",
+    "baseUrl": ".", 
     "types": ["node", "vite/client"],
     "paths": {
-      "@/*": ["./*"],
-      "@shared/*": ["../shared/*"]
+      "@/*": ["client/src/*"],
+      "@shared/*": ["shared/*"]
     },
     "allowJs": true,
     "resolveJsonModule": true
-  }
+  },
+  "include": ["client/src/**/*", "shared/**/*", "server/**/*"],
+  "exclude": ["node_modules", "build", "**/*.test.ts"]
 }
